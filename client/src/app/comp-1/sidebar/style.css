@@ -1,0 +1,139 @@
+/* === Base Reset and Font === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+}
+
+/* === Sidebar === */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 210px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: width 0.4s ease;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    padding: 25px 20px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.header-logo img {
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* === Navigation === */
+.sidebar-nav {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #555;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #f0f0f0;
+    transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    background: #e6f7ff;
+    color: #007bff;
+    border-color: #d6eeff;
+}
+
+.nav-link svg {
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover svg {
+    color: #007bff;
+}
+
+.nav-label {
+    white-space: nowrap;
+}
+
+/* === Optional: Sidebar collapse support === */
+.sidebar.collapsed {
+    width: 85px;
+}
+
+.sidebar.collapsed .nav-label {
+    display: none;
+}
+
+/* === Responsive: Keep sidebar fixed always === */
+@media (max-width: 768px) {
+    body {
+        padding-left: 210px; /* Content flows after sidebar */
+    }
+
+    .sidebar {
+        width: 210px;
+    }
+
+    .sidebar.collapsed {
+        width: 85px;
+    }
+}
+
+/* === Optional back button === */
+.back-button {
+    margin: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #f0f5ff;
+    border: 1px solid #d6e0f5;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #007bff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #e6f0ff;
+}

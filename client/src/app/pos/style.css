@@ -1,0 +1,77 @@
+/* POS.css */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+}
+
+.section {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 0.5rem;
+}
+
+button:hover:enabled {
+    background-color: #0056b3;
+}
+
+.item-list {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.item {
+    padding: 0.75rem;
+    border-bottom: 1px solid #ececec;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.item:hover {
+    background-color: #e6f7ff;
+}
+
+.item.selected {
+    background-color: #e6f7ff;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+}
+
+.total-section {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
