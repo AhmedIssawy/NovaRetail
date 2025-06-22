@@ -25,7 +25,7 @@ app.use(
       resave: false, // Don't save session if unmodified
       saveUninitialized: false, // Don't create session until something stored
       store: MongoStore.create({
-        mongoUrl: 'mongodb+srv://ahmedmohammed227a:W2uyAP7VaBwwhwVH@cluster0.yrlsi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',
+        mongoUrl: '',
         collectionName: 'sessions', // Optional: specify collection name for sessions
         ttl: 14 * 24 * 60 * 60, // Session TTL (Time To Live) in seconds, 14 days
         autoRemove: 'interval', // Remove expired sessions every 'autoRemoveInterval' minutes
@@ -38,7 +38,7 @@ app.use(
       }
     })
 );
-mongoose.connect('mongodb+srv://ahmedmohammed227a:W2uyAP7VaBwwhwVH@cluster0.yrlsi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0').then(()=>{
+mongoose.connect('').then(()=>{
   app.listen(port,()=>{
     console.log('Express server listening on port ' + port);
   })
